@@ -1,8 +1,6 @@
 import numpy as np
 from joblib import load
 
-from app import predict
-
 def reshape(pregnancies, glucose, bloodPressure, skinThickness, insulin, bmi, diabetesPedigreeFunction, age):
     test_data = [
         pregnancies, 
