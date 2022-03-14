@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Varela Round", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: #24252a;
+}
+
+.cta button {
+  margin-left: 20px;
+}
+
+.nav-link {
+  list-style: none;
+}
+
+.nav-link li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-link li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav-link li a:hover {
+  color: #0088a9;
+}
+
+li,
+a,
+button {
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+h2 {
+  margin-right: auto;
+}
+
+h2 a {
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 25px;
+  color: #edf0f1;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3 ease 0s;
+}
+
+button:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+h1 {
+  text-align: center;
+}
+
+.hero {
+  background-image: url("/static/img/hero-image.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+}
+
+.hero h1 {
+  font-size: 64px;
+  text-align: left;
+}
+
+.hero p {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.hero button {
+  margin-left: 0;
+  margin-top: 20px;
+  background-color: rgba(36, 37, 42, 1);
+}
+
+.hero button:hover {
+  background-color: #24252acc;
+}
+
+.hero .hero-heading {
+  padding-top: 15%;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 50%;
+}
+
+.quisioner,
+.characteristic {
+  margin: 20px 10%;
+}
+
+.quisioner,
+.characteristic,
+.profil {
+  margin-top: 20px;
+}
+
+.input input {
+  border-radius: 5px;
+  width: 100%;
+  height: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.quisioner .input,
+.quisioner button {
+  margin-top: 20px;
+}
+
+.row1,
+.row2 {
+  width: 48%;
+}
+
+.rekam-medis {
+  display: flex;
+  justify-content: space-between;
+}
+
+.character-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.card {
+  margin: 10px 5%;
+  border-radius: 15px;
+  border: 1px black solid;
+  box-shadow: black;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-title {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.card-info {
+  padding: 10px;
+}
+
+footer {
+  background-color: #24252a;
+  text-align: center;
+  padding: 15px;
+}
+
+footer h1 {
+  font-weight: bolder;
+  font-size: 16px;
+  color: #edf0f1;
+}
+
+.results {
+  text-align: center;
+}
+
+.result {
+  width: 60%;
+  height: auto;
+  display: inline-block;
+  background-color: #edf0f1;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.result h2 {
+  font-weight: bolder;
+  font-size: 24px;
+  color: #24252a;
+}
+
+@media screen and (max-width: 576px) {
+  header nav ul {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+  }
+
+  .hero p {
+    font-size: 14;
+  }
+
+  .question {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .hero .hero-heading {
+    padding-top: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero .hero-heading {
+    width: 100%;
+    padding-right: 10%;
+  }
+
+  .question {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 85px;
+    padding-bottom: 85px;
+  }
+
+  .question .gejala {
+    display: block;
+  }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo.png') }}" />
+    <title>DiaPredict</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+  </head>
+  <body>
+    <header>
+      <h2><a href="/">DiaPredict!</a></h2>
+      <nav>
+        <ul class="nav-link">
+          <li><a href="/">Home</a></li>
+          <li><a href="#ciri">Ciri-ciri</a></li>
+        </ul>
+      </nav>
+      <a class="cta" href="#quiz"><button>Start Now!</button></a>
+    </header>
+    <main>
+      <div class="hero">
+        <div class="hero-heading">
+          <h1>Segera Cek Kesehatan Anda!</h1>
+          <p class="hero-text">Adanya pandemi Covid-19 membuat orang dengan diabetes beresiko lebih besar jika dibandingkan orang yang sehat.</p>
+          <button class="btn-mulai"><a href="#quiz">Yuk Coba!</a></button>
+        </div>
+        <div id="quiz"></div>
+      </div>
+      <div class="quisioner">
+        <h1>Quisioner</h1>
+        <form action="/predict" method="POST">
+          <div class="input">
+            <label for="name">Nama</label><br />
+            <input type="text" name="name" placeholder="Your Full Name" required />
+          </div>
+          <div class="rekam-medis">
+            <div class="row1">
+              <div class="input">
+                <label for="pregnancies">Jumlah Kehamilan</label><br />
+                <input type="number" step="any" name="pregnancies" placeholder="Your Pregnancies" required />
+              </div>
+              <div class="input">
+                <label for="glucose">Kadar Glukosa</label><br />
+                <input type="number" step="any" name="glucose" placeholder="Your Glucose" required />
+              </div>
+              <div class="input">
+                <label for="bloodPressure">Tekanan Darah</label><br />
+                <input type="number" step="any" name="bloodPressure" placeholder="Your BloodPressure" required />
+              </div>
+              <div class="input">
+                <label for="skinThickness">Ketebalan Kulit</label><br />
+                <input type="number" step="any" name="skinThickness" placeholder="Your SkinThickness" required />
+              </div>
+            </div>
+            <div class="row2">
+              <div class="input">
+                <label for="insulin">Kadar Insulin</label><br />
+                <input type="number" step="any" name="insulin" placeholder="Your Insulin" required />
+              </div>
+              <div class="input">
+                <label for="bmi">Angka BMI</label><br />
+                <input type="number" step="any" name="bmi" placeholder="Your BMI" required />
+              </div>
+              <div class="input">
+                <label for="diabetesPedigreeFunction">Fungsi Turunan Diabetes</label><br />
+                <input type="number" step="any" name="diabetesPedigreeFunction" placeholder="Your DiabetesPedigreeFunction" required />
+              </div>
+              <div class="input">
+                <label for="age">Umur</label><br />
+                <input type="number" step="any" name="age" placeholder="Your Age" required />
+              </div>
+            </div>
+          </div>
+          <div id="ciri"></div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="characteristic">
+        <h1>Ciri-Ciri</h1>
+        <div class="character-container">
+          <div class="card">
+            <h2 class="card-title">Polyuria</h2>
+            <p class="card-info">Keseringan buang air kecil</p>
+          </div>
+          <div class="card">
+            <h2 class="card-title">Polydipsia</h2>
+            <p class="card-info">Banyak minum</p>
+          </div>
+          <div class="card">
+            <h2 class="card-title">Sudden Weight Loss</h2>
+            <p class="card-info">Penurunan berat badan secara drastis</p>
+          </div>
+          <div class="card">
+            <h2 class="card-title">Weakness</h2>
+            <p class="card-info">Lemas</p>
+          </div>
+          <div class="card">
+            <h2 class="card-title">Polyphagia</h2>
+            <p class="card-info">Nafsu makan berlebih</p>
+          </div>
+          <div class="card">
+            <h2 class="card-title">Genital Thrush</h2>
+            <p class="card-info">Infeksi kelamin</p>
+          </div>
+          <div class="card">
+            <h2 class="card-title">Visual Blurring</h2>
+            <p class="card-info">Pandangan kabur</p>
+          </div>
+          <div class="card">
+            <h2 class="card-title">Itching</h2>
+            <p class="card-info">Rasa gatal berlebih</p>
+          </div>
+          <div class="card">
+            <h2 class="card-title">Irritability</h2>
+            <p class="card-info">Perubahan mood</p>
+          </div>
+          <div class="card">
+            <h2 class="card-title">Delayed Healing</h2>
+            <p class="card-info">Proses penyembuhan yang lama</p>
+          </div>
+          <div class="card">
+            <h2 class="card-title">Partial Paresis</h2>
+            <p class="card-info">Melemahnya gerakan badan</p>
+          </div>
+          <div class="card">
+            <h2 class="card-title">Muscle Stiffness</h2>
+            <p class="card-info">Kakunya otot</p>
+          </div>
+          <div class="card">
+            <h2 class="card-title">Alopecia</h2>
+            <p class="card-info">Kerontokan rambut</p>
+          </div>
+          <div class="card">
+            <h2 class="card-title">Obesity</h2>
+            <p class="card-info">Berat badan berlebih</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer><h1>Made by Fahmi Nugroho</h1></footer>
+  </body>
+</html>
